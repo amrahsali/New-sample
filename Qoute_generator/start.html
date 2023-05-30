@@ -1,0 +1,28 @@
+    <div id="quote-container">
+      <h2 id="quote">Random Quote:</h2>
+      <p id="author">Author</p>
+    </div>
+
+    <button id="new-quote">New Quote</button>
+
+    <script>
+
+const quotes = [
+
+            {author:"ahmad", quote:"no condition is parment"},
+            {author:"musa", quote:"charity begins at home"},
+            {author:"isa", quote:"if you must lie, you have to be brief"}
+        ]
+
+    quotecon = document.getElementById("quote")
+    authors = document.getElementById("author")
+    button = document.getElementById("new-quote")
+
+const quoteitem =() =>{
+     randomIndex = Math.floor(Math.random() * quotes.length);
+    quotecon.textContent = 'Random Quote: ' + quotes[randomIndex].quote
+    authors.textContent = "Author:" + quotes[randomIndex].author   
+}
+button.addEventListener('click', quoteitem);
+    </script>
+  
